@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>TodoApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="img" href="img/favicon.png"/> 
+  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="stylesheet" href="/app/public/css/stylesheet.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-tab "id="tabs">
+            <p id="lt" onclick="loginFunc()"  class="tabs" >Log in</p>
+            <p id="rt" onclick="regTabFunc()" class="tabs" >Register</p>
+    
+            <div class="clearFont" id="clear"></div>
+        </div>
+    
+        <div class="cont">
+            <div id="login" class="comm login-comm">
+                <h3>Sign in</h3>
+
+                <p class="loginerror"></p>
+                <input id="se" type="Username" placeholder="Username" required/>
+                <input id="sp" type="password" placeholder="Password" required/>
+                <input type="submit" onclick="loginLog()" value="Submit"/>
+    
+                <!--<p class="forget" onclick="forgotTabFunc()">Forget Password?</p>-->
+            </div>
+
+            <div id="register" class="comm register-comm">
+                <p class="exist"></p> <!--remove displaying-->
+                <p  class="welcome"></p><!--Displaying Welcome text-->
+                <p id="error" class="error"></p><!--Displaying Error Messages-->
+
+                <h3>Register</h3>
+    
+                <input id="re" type="email" placeholder="Username" required/>
+                <input id="rp" type="password" placeholder="Password" required/>
+                <input id="rrp" type="password" placeholder="Confirm Password" required/>
+                <input type="submit" onclick="registerLog()"   value="Submit"/>
+    
+            </div >
+
+
+            <!--<div id="forgot" class="comm forgot-comm">
+                <h3>Forgot Password</h3>
+                <div>
+                    <input id="fe" type="email" placeholder="Email" required/>
+                    <input onclick="forgotLog()" type="submit" value="Submit"/>
+                </div>
+            </div>-->
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

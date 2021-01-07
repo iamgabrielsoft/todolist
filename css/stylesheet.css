@@ -1,0 +1,177 @@
+
+
+html{
+  box-sizing: border-box;  
+}
+
+
+body {
+    background-color: bisque; 
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.2;
+}
+
+.container {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.header {
+    font-size: 70px;
+    opacity: 0.5;
+}
+
+svg {
+    width: 64px;
+    height: 64px;
+}
+
+
+li {
+	list-style: none;
+	padding: 10px;
+  color: red;
+  justify-content: space-evenly;
+	font-weight: 500;
+}
+
+
+input{
+    min-width: 40%;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+}
+
+
+input[type="checkbox"] {
+  display: flex;
+}
+
+
+.todo-item {
+  margin-bottom: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  margin-right: 250px;
+}
+
+.todo-item  span {
+  flex-grow: 1;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 22px;
+}
+
+.done span{
+  text-decoration: line-through;
+}
+
+.tick {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #333;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+.tick::before {
+  content: '✓';
+  font-size: 20px;
+  display: none;
+}
+
+.delete-todo {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.done .tick::before {
+  display: inline;
+}
+
+.delete-todo svg {
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+
+.empty-state {
+  flex-direction: column;
+  align-items: center;
+  display: none;
+  justify-content: center;
+}
+
+.checklist-icon {
+  margin-bottom: 20px;
+}
+
+.empty-state__title {
+  margin-bottom: 20px; 
+  color:black;
+}
+
+.todo-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.todo-list:empty {
+  display: none;
+}
+
+.todo-list:empty + .empty-state {
+  display: ruby;
+}
+
+
+.error {
+  background-attachment: fixed;
+  font-weight: 700;
+  height: inherit;
+  color: crimson;
+  border-radius: 3px;
+  background-color: azure;
+}
+
+.clearall, .save {
+  width: 100px;
+  height: 50px;
+}
+
+@media only screen and (min-width: 564px) {
+  .container {
+    width: 100%
+  }
+
+  .empty-state__title {
+    color: blue;
+  }
+}
+
+@media only screen and (max-width: 318px) {
+  input[type="checkbox"] {
+    position: absolute; 
+    margin-left: 100px;
+  }  
+
+  .empty-state__title {
+    color:chartreuse;
+  }
+}
+
+@media only screen and (max-width: 393px) {
+  input[type="checkbox"] {
+    position: absolute; 
+    margin-left: 100px;
+  } 
+}
